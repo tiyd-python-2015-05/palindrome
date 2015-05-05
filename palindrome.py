@@ -16,10 +16,8 @@ def rec(inp):
       if(len(inp)==1):
           return True
       else:
-          if inp[0]==inp[-1]:
-              return True
-          else:
-              return False
+          return inp[0]==inp[-1]
+
 
 if rec(string):
     print("\"{}\" is a palindrome!".format(string))
