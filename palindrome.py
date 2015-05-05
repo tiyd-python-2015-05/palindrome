@@ -7,8 +7,8 @@ def make_text(text):
 
 
 def palindrome(text):
-    """Takes text, removes punctuation and spaces, and
-    returns 'is a palindrome' or 'is not a palindrome'"""
+    """Takes text and returns 'is a palindrome'
+    or 'is not a palindrome'"""
     length = len(text)
     test_a = 0
     test_b = length - 1
@@ -23,12 +23,6 @@ def palindrome(text):
         else:
             counter -= 1
     return "is a palindrome"
-
-#    length = len(text)
-#    if length == 0:
-#        return "is a palindrome"
-#    else:
-#        return "is not a palindrome"
 
 test_case = input("What is your text? ")
 corrected_test = make_text(test_case)
