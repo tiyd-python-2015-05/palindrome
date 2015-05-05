@@ -12,23 +12,13 @@ def palindrome_check(a_string, end, start):
             against the character referenced by "start" """
 
 
-    if len(a_string)%2 == 0:    #Checks to see if string length is odd or even
-        if start == (end+1):
-            return "Yes, that is a palindrome."
-        else:
-            if a_string[start] == a_string[end]:
-                return palindrome_check(a_string, end-1, start+1)
-            else:
-                return "No, that is not a palindrome."
+    if start == end or start == end + 1:
+        return "Yes, that is a palindrome."
     else:
-        if start == end:
-            return "Yes, that is a palindrome."
+        if a_string[start] == a_string[end]:
+            return palindrome_check(a_string, end-1, start+1)
         else:
-            if a_string[start] == a_string[end]:
-                return palindrome_check(a_string, end-1, start+1)
-            else:
-                return "No, that is not a palindrome."
-
+            return "No, that is not a palindrome."
 
 
 
