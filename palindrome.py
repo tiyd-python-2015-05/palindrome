@@ -9,7 +9,6 @@ def ite(inp):
   while len(inp)>1:
       if inp[0]==inp[-1]:
           inp = inp[1:-1]
-          continue
       else:
           return False
   return True
