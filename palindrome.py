@@ -16,10 +16,29 @@ def isapalindrome( text ):
     # let the user know if it is a palindrome or not
 
 # ask the user to input some text
-user_text = input("Enter some text: ")
+#user_text = input("Enter some text: ")
 
 
-if isapalindrome(user_text):
+'''if isapalindrome(user_text):
     print("{} is a palindrome".format(user_text))
 else:
     print("{} is not a palindrome".format(user_text))
+
+'''
+
+def reverseChar( word, lower_case=False, special_char_strip=False ):
+    reversed_word = ''
+    for letter in word:
+        if len(word) == 1:
+            reversed_word = reversed_word + word
+        else:
+            reversed_word =  reversed_word+word[-1]
+            word = word[:len(word)-1]
+            reverseChar(word)
+    if lower_case:
+        reversed_word = reversed_word.lower()
+
+    if special_char_strip:
+        reversed_word = sub(r'[^A-Za-z]', "", reversed_word)
+
+    return reversed_word
