@@ -18,9 +18,13 @@ def palindrome(text):
         return "is a palindrome"
 
     while counter > 0:
+    
         if text[test_a] != text[test_b]:
             return "is not a palindrome"
+
         else:
+            test_a += 1
+            test_b -= 1
             counter -= 1
     return "is a palindrome"
 
