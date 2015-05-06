@@ -2,7 +2,7 @@
 
 describe "palindrome.py: Determines if a text is palindromic"
 
-prog="python3 palindrome.py"
+prog="python3 Recursive.py"
 
 it_works_for_even_numbers() {
   out="$(echo 'toot' | $prog)"
