@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import re
 
 
@@ -11,17 +12,16 @@ def i_palindrome(text):
     for index, char in enumerate(text):
         mirror_index = -1 * (index + 1)
         mirror_char = text[mirror_index]
-        if char == mirror_char :
+        if char == mirror_char:
             print(char, '==', mirror_char, ' , ', end='')
         else:
-            print(text[:index + 1], ' != ', text[:mirror_index-1:-1])
+            print(text[:index + 1], ' != ', text[:mirror_index - 1:-1])
             return False
     return True
 
 
 def r_palindrome(text):
     """Check for palindrome with a recursive method"""
-
     if text == '':
         return True
     elif text[0] == text[-1]:
@@ -39,13 +39,12 @@ def e_palindrome(text):
 
 def test_palindrome(text, style='iterative'):
     """Test for palindrome using chosen style (iterative/recursive/easy)"""
-
     is_palindrome = False
 
     if style == 'iterative':
         print('\n...Testing iteratively...')
         is_palindrome = i_palindrome(text)
-    elif style=='recursive':
+    elif style == 'recursive':
         print('\n...Testing recursively...')
         is_palindrome = r_palindrome(text)
     else:
@@ -57,9 +56,8 @@ def test_palindrome(text, style='iterative'):
     else:
         print('That is not a palindrome!')
 
-
-#text = 'A man, a plan, a cat, a ham, a yak, a yam, a hat, a canal: Panama!'
-text =  input("Gimme some text:")
+# text = 'A man, a plan, a cat, a ham, a yak, a yam, a hat, a canal: Panama!'
+text = input("Please provide some text to test: ")
 text = clean_text(text)
 test_palindrome(text, 'iterative')
 test_palindrome(text, 'recursive')
